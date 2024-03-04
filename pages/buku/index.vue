@@ -11,7 +11,7 @@
         </div>
         <div class="my-3 text-muted">menampilkan 3 dari 100</div>
         <div class="row">
-          <div class="col-sm-2">
+          <div class="col-sm-2 mb-4">
             <nuxt-link to="/buku/buku1">
               <div class="card-header">
                 <div class="card-body">
@@ -20,7 +20,7 @@
               </div>
             </nuxt-link>
           </div>
-          <div class="col-sm-2">
+          <div class="col-sm-2 mb-4">
             <nuxt-link to="/buku/buku-2">
               <div class="card-header">
                 <div class="card-body">
@@ -29,7 +29,7 @@
               </div>
             </nuxt-link>
           </div>
-          <div class="col-sm-2">
+          <div class="col-sm-2 mb-4">
             <nuxt-link to="/buku/buku_3">
               <div class="card-header">
                 <div class="card-body">
@@ -50,5 +50,8 @@
 }
 .img-thumbnail {
   width: 80%;
+}
+.container-fluid {
+  margin-top: 150px;
 }
 </style>

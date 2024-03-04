@@ -53,3 +53,9 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.container-fluid {
+  margin-top: 150px;
+}
+</style>

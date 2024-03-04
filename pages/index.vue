@@ -118,4 +118,7 @@ export default {
 h1 {
   font-size: 7rem;
 }
+.container-fluid {
+  margin-top: 150px;
+}
 </style>

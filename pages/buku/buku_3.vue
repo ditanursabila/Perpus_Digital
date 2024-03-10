@@ -6,14 +6,12 @@
       </div>
       <h2 class="text-center my-2">DETAIL</h2>
       <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="~/assets/img/Bleeding.jpg" class="cover" alt="cover 1" />
-          </div>
+        <div>
+          <img src="~/assets/img/Bleeding.jpg" class="cover" alt="cover 1" />
         </div>
       </div>
-      <div class="col-lg-9">
-        <div class="mb-5">
+      <div class="col-sm-7">
+        <div class="me-1">
           <h6>Rak: 800</h6>
           <h6>Kategori: Kesusastraan</h6>
           <h6>Judul:Bleending Love</h6>
@@ -31,6 +29,6 @@
 
 <style scoped>
 .container-fluid {
-  margin-top: 150px;
+  margin-top: 210px;
 }
 </style>

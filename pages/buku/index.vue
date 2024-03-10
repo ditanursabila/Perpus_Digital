@@ -4,7 +4,7 @@
       <div>
         <NuxtLink to="/" class="btn btn-primary mt-3">⬅️Back to home</NuxtLink>
       </div>
-      <div class="col-lg-12">
+      <div class="col-sm-12">
         <h2 class="text-center my-4">CARI BUKU</h2>
         <div class="my-3">
           <input type="search" class="form-control rounded-5" placeholder="Mau baca apa hari ini?" />
@@ -52,6 +52,6 @@
   width: 80%;
 }
 .container-fluid {
-  margin-top: 150px;
+  margin-top: 203px;
 }
 </style>

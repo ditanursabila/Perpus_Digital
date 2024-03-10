@@ -73,6 +73,6 @@
 
 <style scoped>
 .container-fluid {
-  margin-top: 150px;
+  margin-top: 205px;
 }
 </style>

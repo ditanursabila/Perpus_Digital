@@ -47,7 +47,7 @@
   </div>
   <!--STATISTIK DIAGRAM-->
   <div class="row mt-3">
-    <div class="col-md-10 offset-lg-1">
+    <div class="col-sm-9 offset-sm-1">
       <div class="card-body">
         <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
       </div>
@@ -119,6 +119,6 @@ h1 {
   font-size: 7rem;
 }
 .container-fluid {
-  margin-top: 150px;
+  margin-top: 225px;
 }
 </style>

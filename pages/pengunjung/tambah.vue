@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-sm-3">
         <NuxtLink to="/" class="btn btn-primary mt-3">⬅️Back to home</NuxtLink>
       </div>
-      <div class="col-lg-5">
+      <div class="col-sm-5">
         <h2 class="text-center my-4">ISI BUKU KUNJUNGAN</h2>
 
         <form>
@@ -56,6 +56,6 @@
 
 <style scoped>
 .container-fluid {
-  margin-top: 150px;
+  margin-top: 203px;
 }
 </style>

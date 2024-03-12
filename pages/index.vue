@@ -5,7 +5,7 @@
         <nuxt-link to="/pengunjung/tambah">
           <div class="card bg-pengunjung rounded-5 mb-4">
             <div class="card-body">
-              <h2 class="pengunjung">Pengunjung</h2>
+              <h2 class="pengunjung fw-bold">Pengunjung</h2>
             </div>
           </div>
         </nuxt-link>
@@ -15,7 +15,7 @@
         <nuxt-link to="/buku">
           <div class="card bg-buku rounded-5">
             <div class="card-body">
-              <h2>Cari buku</h2>
+              <h2 class="fw-bold">Cari buku</h2>
             </div>
           </div>
         </nuxt-link>
@@ -31,7 +31,7 @@
     <div class="col-lg-6">
       <div class="card bg-warning rounded-5 ms-3 mb-4">
         <div class="card-body text">
-          <h2 class="ps-5">15</h2>
+          <h2 class="ps-5">5</h2>
           <h3 class="pt-5">Pengunjung</h3>
         </div>
       </div>
@@ -77,6 +77,8 @@ export default {
       },
       chartOptions: {
         responsive: true,
+        maintainAspectRatio: false,
+        aspectRatio: 0.7,
       },
     };
   },
@@ -119,6 +121,6 @@ h1 {
   font-size: 7rem;
 }
 .container-fluid {
-  margin-top: 225px;
+  margin-top: 220px;
 }
 </style>

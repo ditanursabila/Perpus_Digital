@@ -1,24 +1,24 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div>
-        <NuxtLink to="/" class="btn btn-primary mt-3">⬅️Back to home</NuxtLink>
+      <div class="col-lg-1">
+        <NuxtLink to="/pengunjung/tambah" class="btn btn-primary mt-3">⬅️Back</NuxtLink>
       </div>
-      <div class="col-lg-12">
-        <h2 class="text-center my-4">RIWAYAT KUNJUNGAN</h2>
+      <div class="col-lg-10">
+        <h2 class="text-center mb-4 mt-3 fw-bold">RIWAYAT KUNJUNGAN</h2>
         <div class="my-3">
-          <input type="search" class="form-control form-control-lg rounded-5" placeholder="FILTER" />
+          <input type="search" class="form-control form-control-lg rounded-5 border-primary bg-secondary" placeholder="Filter..." />
         </div>
-        <div class="my-3 text-muted">menampilkan 7 dari 15</div>
+        <div class="my-3 text-muted">menampilkan 3 dari 3</div>
 
-        <table class="table table-hover">
-          <thead class="table-dark">
+        <table class="table table-bordered border-dark table-hover">
+          <thead class="fw-bold">
             <tr>
-              <td>NO</td>
-              <td>NAMA</td>
-              <td>KATEGORI</td>
-              <td>WAKTU</td>
-              <td>KEPERLUAN</td>
+              <td>no</td>
+              <td>nama</td>
+              <td>kategori</td>
+              <td>waktu</td>
+              <td>keperluan</td>
             </tr>
           </thead>
           <tbody>
@@ -38,31 +38,10 @@
             </tr>
             <tr>
               <td>3</td>
-              <td>Sasta</td>
-              <td>Siswa</td>
-              <td>29 Februari 2024, 9.10</td>
-              <td>Baca buku</td>
-            </tr>
-            <tr>
-              <td>4</td>
               <td>Zul Hilmi</td>
               <td>Guru</td>
               <td>25 Februari 2024, 8.00</td>
               <td>Pinjam buku</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Deni</td>
-              <td>Guru</td>
-              <td>26 Februari 2024, 13.00</td>
-              <td>pinjam buku</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Mirna</td>
-              <td>Siswa</td>
-              <td>2 maret 2024, 10.00</td>
-              <td>Mengembalikan buku</td>
             </tr>
           </tbody>
         </table>
@@ -73,6 +52,9 @@
 
 <style scoped>
 .container-fluid {
-  margin-top: 205px;
+  margin-top: 160px;
+}
+.bg-secondary {
+  background-color: #d9d9d9 !important;
 }
 </style>

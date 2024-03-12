@@ -36,7 +36,7 @@
 
 <style scoped>
 .container-fluid {
-  margin-top: 160px;
+  margin-top: 205px;
 }
 .card {
   width: 20%;

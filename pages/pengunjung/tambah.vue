@@ -51,7 +51,7 @@
 
 <style scoped>
 .container-fluid {
-  margin-top: 160px;
+  margin-top: 205px;
 }
 .bg-secondary {
   background-color: #d9d9d9 !important;

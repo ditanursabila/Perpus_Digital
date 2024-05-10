@@ -1,3 +1,38 @@
+<script setup>
+const supabase = useSupabaseClient();
+const books = ref([]);
+const keyword = ref([]);
+const loading = ref(true);
+const jmlbuku = ref(0);
+
+const getJmlBooks = async () => {
+  const { data, count } = await supabase.from("buku").select("*", { count: "exact" });
+  if (data) jmlbuku.value = count;
+};
+const getBooks = async () => {
+  loading.value = true;
+  const { data, error } = await supabase
+    .from("buku")
+    .select(
+      `
+      id, judul, penulis, penerbit,
+      kategori(nama), rak(no_rak),cover
+    `
+    )
+    .ilike("judul", `%${keyword.value}%`);
+  if (data) {
+    books.value = data;
+    loading.value = false;
+  }
+  if (error) throw error;
+};
+
+onMounted(() => {
+  getBooks();
+  getJmlBooks();
+});
+</script>
+
 <template>
   <div class="container-fluid">
     <div class="row">
@@ -6,40 +41,32 @@
       </div>
       <div class="col-lg-10">
         <h2 class="text-center mb-4 mt-3 fw-bold">CARI BUKU</h2>
-        <div class="my-3">
-          <input type="search" class="form-control rounded-5 bg-secondary border-primary" placeholder="Mau baca apa hari ini?" />
-        </div>
-        <div class="my-3 text-muted">menampilkan 3 dari 100</div>
+
+        <form @submit.prevent="getBooks">
+          <input v-model="keyword" class="form-control form-control-lg rounded-pill bg-secondary border-primary" placeholder="Mau baca apa hari ini?" />
+        </form>
+
+        <div class="my-3 text-muted">menampilkan {{ books.length }} dari {{ jmlbuku }}</div>
+
         <div class="row">
-          <div class="col-sm-2 mb-4 me-5">
-            <nuxt-link to="/buku/buku1">
-              <div class="card">
-                <img src="~/assets/img/Bincang_Akhlak.jpg" class="cover" alt="cover 1" />
-                <div class="card-body">
-                  <p class="card-text">Bincang akhlak</p>
-                </div>
-              </div>
-            </nuxt-link>
+          <div v-if="loading">
+            <div class="text-center">
+              <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Sedang memuat buku...
+              </button>
+            </div>
           </div>
-          <div class="col-sm-2 mb-4 me-5">
-            <nuxt-link to="/buku/buku-2">
+
+          <div v-for="(book, i) in books" :key="i" class="col-sm-2 mb-4 me-4">
+            <NuxtLink :to="`buku/${book.id}`">
               <div class="card">
-                <img src="~/assets/img/demung.jpg" class="cover" alt="cover2" />
+                <img :src="book.cover" class="cover" alt="cover 1" />
                 <div class="card-body">
-                  <p class="card-text">Demung Janggala</p>
+                  <h6>{{ book.judul }}</h6>
                 </div>
               </div>
-            </nuxt-link>
-          </div>
-          <div class="col-sm-2 mb-4 me-5">
-            <nuxt-link to="/buku/buku_3">
-              <div class="card">
-                <img src="~/assets/img/Bleeding.jpg" class="cover" alt="cover3" />
-                <div class="card-body">
-                  <p class="card-text">Bleeding Love</p>
-                </div>
-              </div>
-            </nuxt-link>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -60,7 +87,6 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: #d9d9d9;
 }
 img {
   width: 90%;
@@ -69,5 +95,9 @@ img {
 }
 .bg-secondary {
   background-color: #d9d9d9 !important;
+  width: 100%;
+}
+.border-primary {
+  border-color: rgb(122, 122, 179) !important;
 }
 </style>

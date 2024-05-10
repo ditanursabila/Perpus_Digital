@@ -52,7 +52,8 @@ onMounted(() => {
               <option v-for="(member, i) in members" :key="i" :value="member.id">{{ member.nama }}</option>
             </select>
           </div>
-          <div class="mb">
+
+          <div class="mb" v-if="form.keanggotaan == '1'">
             <div class="row">
               <div class="col-md-6">
                 <select v-model="form.tingkat" class="form-control form-control-lg form-select rounded-5 mb-2">
@@ -85,6 +86,7 @@ onMounted(() => {
               </div>
             </div>
           </div>
+
           <div class="mb-3">
             <select v-model="form.keperluan" class="form-control form-control-lg form-select rounded-5 mb-2">
               <option value="">KEPERLUAN</option>

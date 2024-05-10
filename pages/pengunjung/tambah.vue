@@ -93,8 +93,8 @@ onMounted(() => {
               <option v-for="(item, i) in objectives" :key="i" :value="item.id">{{ item.nama }}</option>
             </select>
           </div>
-          <div class="col-lg-3">
-            <button type="submit" class="btn btn-primary text-dark btn-lg rounded-5 px-4 border-primary">KIRIM</button>
+          <div class="col-lg-12">
+            <button type="submit" class="btn btn-primary text-light fw-bold btn-md rounded-3 px-4 border-primary">KIRIM</button>
           </div>
         </form>
       </div>

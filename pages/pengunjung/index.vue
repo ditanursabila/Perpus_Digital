@@ -31,7 +31,7 @@ onMounted(() => {
             <input v-model="keyword" type="search" class="form-control form-control-lg rounded-5 border-primary bg-secondary" placeholder="Cari nama kamu disini..." />
           </form>
         </div>
-        <div class="my-3 text-muted">menampilkan {{ visitors.length }} dari {{ jmlPengunjung }}</div>
+        <div class="my-3 text-muted">Menampilkan {{ visitors.length }} dari {{ jmlPengunjung }}</div>
 
         <table class="table table-bordered border-dark table-hover">
           <thead class="fw-bold table-dark">

@@ -46,7 +46,7 @@ onMounted(() => {
           <input v-model="keyword" class="form-control form-control-lg rounded-pill bg-secondary border-primary" placeholder="Mau baca apa hari ini?" />
         </form>
 
-        <div class="my-3 text-muted">menampilkan {{ books.length }} dari {{ jmlbuku }}</div>
+        <div class="my-3 text-muted">Menampilkan {{ books.length }} dari {{ jmlbuku }}</div>
 
         <div class="row">
           <div v-if="loading">
@@ -59,14 +59,14 @@ onMounted(() => {
           </div>
 
           <div v-for="(book, i) in books" :key="i" class="col-sm-2 mb-4 me-4">
-            <NuxtLink :to="`buku/${book.id}`">
-              <div class="card">
+            <div class="card">
+              <NuxtLink :to="`buku/${book.id}`">
                 <img :src="book.cover" class="cover" alt="cover 1" />
-                <div class="card-body">
-                  <h6>{{ book.judul }}</h6>
-                </div>
+              </NuxtLink>
+              <div class="card-body">
+                <p>{{ book.judul }}</p>
               </div>
-            </NuxtLink>
+            </div>
           </div>
         </div>
       </div>

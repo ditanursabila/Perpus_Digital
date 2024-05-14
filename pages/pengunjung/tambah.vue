@@ -90,7 +90,7 @@ onMounted(() => {
           <div class="mb-3">
             <select v-model="form.keperluan" class="form-control form-control-lg form-select rounded-5 mb-2">
               <option value="">KEPERLUAN</option>
-              <option v-for="(item, i) in objectives" :key="i" :value="item.id">{{ item.nama }}</option>
+              <option v-for="(  item, i) in objectives" :key="i" :value="item.id">{{ item.nama }}</option>
             </select>
           </div>
           <div class="col-lg-12">

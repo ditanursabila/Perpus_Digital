@@ -8,9 +8,6 @@ useHead({
     },
   ],
 });
-
-const supabase = useSupabaseClient();
-
 const visitor = ref(0);
 const Hbuku = ref(0);
 
@@ -30,69 +27,59 @@ onMounted(() => {
 </script>
 
 <template>
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Perpus Home</title>
-    </head>
-    <body>
-      <div class="container-fluid">
-        <div class="row my-5">
-          <div class="col-lg-6">
-            <nuxt-link to="/pengunjung/tambah">
-              <div class="card bg-pengunjung rounded-5 mb-4">
-                <div class="card-body">
-                  <h2 class="pengunjung fw-bold">Pengunjung</h2>
-                </div>
-              </div>
-            </nuxt-link>
-          </div>
-
-          <div class="col-lg-6">
-            <nuxt-link to="/buku">
-              <div class="card bg-buku rounded-5">
-                <div class="card-body">
-                  <h2 class="fw-bold">Cari buku</h2>
-                </div>
-              </div>
-            </nuxt-link>
-          </div>
-        </div>
-      </div>
-      <!--STATISTIK-->
-      <div class="statistik">
-        <h2 class="pt-4 ps-3 fw-bold">STATISTIK</h2>
-      </div>
-      <!--STATISTIK CARD-->
-      <div class="row my-5">
-        <div class="col-lg-6">
-          <nuxt-link to="/pengunjung">
-            <div class="card bg-warning rounded-5 ms-3 mb-4">
-              <div class="card-body text">
-                <h2 class="ps-5">{{ visitor }}</h2>
-                <h3 class="pt-5">Pengunjung</h3>
-              </div>
-            </div>
-          </nuxt-link>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="card bg-success rounded-5 ms-3">
-            <div class="card-body text">
-              <h2 class="ps-5">{{ Hbuku }}</h2>
-              <h3 class="pt-5">Buku</h3>
+  <div class="container-fluid">
+    <div class="row my-5">
+      <div class="col-lg-6">
+        <nuxt-link to="/pengunjung/tambah">
+          <div class="card bg-pengunjung rounded-5 mb-4">
+            <div class="card-body">
+              <h2 class="pengunjung fw-bold">Pengunjung</h2>
             </div>
           </div>
+        </nuxt-link>
+      </div>
+
+      <div class="col-lg-6">
+        <nuxt-link to="/buku">
+          <div class="card bg-buku rounded-5">
+            <div class="card-body">
+              <h2 class="fw-bold">Cari buku</h2>
+            </div>
+          </div>
+        </nuxt-link>
+      </div>
+    </div>
+  </div>
+  <!--STATISTIK-->
+  <div class="statistik">
+    <h2 class="pt-4 ps-3 fw-bold">STATISTIK</h2>
+  </div>
+  <!--STATISTIK CARD-->
+  <div class="row my-5">
+    <div class="col-lg-6">
+      <nuxt-link to="/pengunjung">
+        <div class="card bg-warning rounded-5 ms-3 mb-4">
+          <div class="card-body text">
+            <h2 class="ps-5">{{ visitor }}</h2>
+            <h3 class="pt-5">Pengunjung</h3>
+          </div>
+        </div>
+      </nuxt-link>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card bg-success rounded-5 ms-3">
+        <div class="card-body text">
+          <h2 class="ps-5">{{ Hbuku }}</h2>
+          <h3 class="pt-5">Buku</h3>
         </div>
       </div>
-      <!--STATISTIK DIAGRAM-->
-      <div>
-        <Chart />
-      </div>
-    </body>
-  </html>
+    </div>
+  </div>
+  <!--STATISTIK DIAGRAM-->
+  <div>
+    <Chart />
+  </div>
 </template>
 
 <style scoped>

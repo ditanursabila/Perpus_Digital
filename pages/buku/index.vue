@@ -8,8 +8,6 @@ useHead({
     },
   ],
 });
-
-const supabase = useSupabaseClient();
 const books = ref([]);
 const keyword = ref([]);
 const loading = ref(true);
@@ -44,54 +42,44 @@ onMounted(() => {
 </script>
 
 <template>
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Perpus Books</title>
-    </head>
-    <body>
-      <div class="container-fluid">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-1">
+        <NuxtLink to="/" class="btn btn-primary mt-3">⬅️Back</NuxtLink>
+      </div>
+      <div class="col-lg-10">
+        <h2 class="text-center mb-4 mt-3 fw-bold">CARI BUKU</h2>
+
+        <form @submit.prevent="getBooks">
+          <input v-model="keyword" class="form-control form-control-lg rounded-pill bg-secondary border-primary" placeholder="Mau baca apa hari ini?" />
+        </form>
+
+        <div class="my-3 text-muted">Menampilkan {{ books.length }} dari {{ jmlbuku }}</div>
+
         <div class="row">
-          <div class="col-lg-1">
-            <NuxtLink to="/" class="btn btn-primary mt-3">⬅️Back</NuxtLink>
+          <div v-if="loading">
+            <div class="text-center">
+              <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Sedang memuat buku...
+              </button>
+            </div>
           </div>
-          <div class="col-lg-10">
-            <h2 class="text-center mb-4 mt-3 fw-bold">CARI BUKU</h2>
 
-            <form @submit.prevent="getBooks">
-              <input v-model="keyword" class="form-control form-control-lg rounded-pill bg-secondary border-primary" placeholder="Mau baca apa hari ini?" />
-            </form>
-
-            <div class="my-3 text-muted">Menampilkan {{ books.length }} dari {{ jmlbuku }}</div>
-
-            <div class="row">
-              <div v-if="loading">
-                <div class="text-center">
-                  <button class="btn btn-primary" type="button" disabled>
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    Sedang memuat buku...
-                  </button>
-                </div>
-              </div>
-
-              <div v-for="(book, i) in books" :key="i" class="col-sm-2 mb-4 me-4">
-                <div class="card">
-                  <NuxtLink :to="`buku/${book.id}`">
-                    <img :src="book.cover" class="cover" alt="cover 1" />
-                  </NuxtLink>
-                  <div class="card-body">
-                    <p>{{ book.judul }}</p>
-                  </div>
-                </div>
+          <div v-for="(book, i) in books" :key="i" class="col-sm-2 mb-4 me-4">
+            <div class="card">
+              <NuxtLink :to="`buku/${book.id}`">
+                <img :src="book.cover" class="cover" alt="cover 1" />
+              </NuxtLink>
+              <div class="card-body">
+                <p>{{ book.judul }}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </body>
-  </html>
+    </div>
+  </div>
 </template>
 
 <style scoped>

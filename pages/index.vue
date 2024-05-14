@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
   <div class="container-fluid">
-    <div class="row my-5 ms-5">
+    <div class="row my-5">
       <div class="col-lg-6">
         <nuxt-link to="/pengunjung/tambah">
           <div class="card bg-pengunjung rounded-5 mb-4">
@@ -44,11 +44,11 @@ onMounted(() => {
     </div>
   </div>
   <!--STATISTIK-->
-  <div class="statistik ms-5">
+  <div class="statistik">
     <h2 class="pt-4 ps-3 fw-bold">STATISTIK</h2>
   </div>
   <!--STATISTIK CARD-->
-  <div class="row my-5 ms-5">
+  <div class="row my-5">
     <div class="col-lg-6">
       <div class="card bg-warning rounded-5 ms-3 mb-4">
         <div class="card-body text">
@@ -77,7 +77,6 @@ onMounted(() => {
 .card {
   height: 250px;
   box-shadow: 1px 1px 10px #424242;
-  width: 60%;
 }
 .card.bg-pengunjung {
   background: url("../assets/img/kunjungan.webp") no-repeat center center;
@@ -88,11 +87,6 @@ onMounted(() => {
   background: url("../assets/img/caribuku.webp") no-repeat center center;
   background-size: cover;
   color: black;
-}
-.card-bawah {
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
 }
 .bg-warning {
   background-color: #ffec44 !important;

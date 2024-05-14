@@ -14,7 +14,8 @@
 
 <style scoped>
 img {
-  width: 90px;
+  width: 100%;
+  height: 100%;
 }
 .bg-primary {
   background-color: #1876cd !important;

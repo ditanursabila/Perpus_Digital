@@ -1,4 +1,14 @@
 <script setup>
+useHead({
+  title: "Perpus Home",
+  meta: [
+    {
+      name: "description",
+      content: "Home Page",
+    },
+  ],
+});
+
 const supabase = useSupabaseClient();
 
 const visitor = ref(0);

@@ -1,4 +1,14 @@
 <script setup>
+useHead({
+  title: "Perpus Detail",
+  meta: [
+    {
+      name: "description",
+      content: "Book Detail",
+    },
+  ],
+});
+
 const supabase = useSupabaseClient();
 const route = useRoute();
 const buku = ref([]);

@@ -1,4 +1,14 @@
 <script setup>
+useHead({
+  title: "Perpus Riwayat",
+  meta: [
+    {
+      name: "description",
+      content: "Riwayat Kunjungan",
+    },
+  ],
+});
+
 const supabase = useSupabaseClient();
 const visitors = ref([]);
 const jmlPengunjung = ref(0);

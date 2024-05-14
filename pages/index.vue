@@ -77,7 +77,7 @@ onMounted(() => {
 .card {
   height: 250px;
   box-shadow: 1px 1px 10px #424242;
-  width: 70%;
+  width: 60%;
 }
 .card.bg-pengunjung {
   background: url("../assets/img/kunjungan.webp") no-repeat center center;

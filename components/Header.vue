@@ -1,7 +1,7 @@
 <template>
   <div class="row p-2 bg-primary text-white justify-content-center fixed-top">
     <div class="col-md-1">
-      <img src="~/assets/img/LOGOSMKN4.webp " alt="logo SMKN 4" />
+      <img src="~/assets/img/logo.webp " alt="logo SMKN 4" />
     </div>
 
     <div class="col-md-3 ms-4">

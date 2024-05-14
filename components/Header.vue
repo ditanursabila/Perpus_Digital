@@ -4,7 +4,7 @@
       <img src="~/assets/img/logo.webp " alt="logo SMKN 4" />
     </div>
 
-    <div class="col-md-3 ms-4">
+    <div class="col-md-3 mt-3 ms-4">
       <h4>PERPUS DIGITAL</h4>
       <div>SMKN 4 Tasikmalaya</div>
       <address>JL.Depok, Sukamenak, Purbaratu</address>
@@ -14,8 +14,8 @@
 
 <style scoped>
 img {
-  width: 100%;
-  height: 100%;
+  width: 117px;
+  height: 132px;
 }
 .bg-primary {
   background-color: #1876cd !important;

@@ -8,7 +8,7 @@ useHead({
     },
   ],
 });
-const supabase = useSupabaseClient();
+const supabase = useSupabaseClient()
 const visitor = ref(0);
 const Hbuku = ref(0);
 

@@ -8,7 +8,7 @@ const data = {
     {
       label: "Pengunjung",
       data: [80, 20, 60, 25, 45, 17, 55, 100, 59, 35, 25, 79],
-      backgroundColor: ["#FF0000", "#00008B", "#1B8A6B", "#00008B", "#1B8A6B", "#00008B", "#1B8A6B", "#FF0000", "#1B8A6B", "#1B8A6B", "#00008B", "#FF0000"],
+      backgroundColor: ["#1876cd"],
     },
   ],
 };

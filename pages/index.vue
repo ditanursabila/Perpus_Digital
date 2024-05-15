@@ -8,7 +8,7 @@ useHead({
     },
   ],
 });
-const supabase = useSupabaseClient()
+const supabase = useSupabaseClient();
 const visitor = ref(0);
 const Hbuku = ref(0);
 
@@ -51,11 +51,9 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <!--STATISTIK-->
   <div class="statistik">
     <h2 class="pt-4 ps-3 fw-bold">STATISTIK</h2>
   </div>
-  <!--STATISTIK CARD-->
   <div class="row my-5">
     <div class="col-lg-6">
       <nuxt-link to="/pengunjung">
@@ -77,7 +75,6 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <!--STATISTIK DIAGRAM-->
   <div>
     <Chart />
   </div>
@@ -115,6 +112,6 @@ h1 {
   font-size: 7rem;
 }
 .container-fluid {
-  margin-top: 220px;
+  margin-top: 250px;
 }
 </style>

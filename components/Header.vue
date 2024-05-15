@@ -1,10 +1,10 @@
 <template>
   <div class="row p-2 bg-primary text-white justify-content-center fixed-top">
-    <div class="col-md-1">
-      <img src="~/assets/img/logo.webp " alt="logo SMKN 4" />
+    <div class="col-lg-1">
+      <img src="~/assets/img/LOGOSMKN4.webp " alt="logo SMKN 4" />
     </div>
 
-    <div class="col-md-3 mt-3 ms-4">
+    <div class="col-lg-3 mt-3 ms-4">
       <h4>PERPUS DIGITAL</h4>
       <div>SMKN 4 Tasikmalaya</div>
       <address>JL.Depok, Sukamenak, Purbaratu</address>
@@ -14,8 +14,8 @@
 
 <style scoped>
 img {
-  width: 117px;
-  height: 132px;
+  width: 100px;
+  /* height: 120px; */
 }
 .bg-primary {
   background-color: #1876cd !important;

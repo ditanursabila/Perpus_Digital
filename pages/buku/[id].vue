@@ -8,6 +8,7 @@ useHead({
     },
   ],
 });
+const supabase = useSupabaseClient();
 const route = useRoute();
 const buku = ref([]);
 const loading = ref(true);
@@ -64,7 +65,7 @@ onMounted(() => {
 
 <style scoped>
 .container-fluid {
-  margin-top: 205px;
+  margin-top: 230px;
 }
 .cover {
   width: 200px;

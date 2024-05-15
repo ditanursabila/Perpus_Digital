@@ -8,6 +8,7 @@ useHead({
     },
   ],
 });
+const supabase = useSupabaseClient();
 const members = ref([]);
 const objectives = ref([]);
 const form = ref({
@@ -108,6 +109,6 @@ onMounted(() => {
 
 <style scoped>
 .container-fluid {
-  margin-top: 205px;
+  margin-top: 230px;
 }
 </style>

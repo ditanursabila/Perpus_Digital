@@ -8,6 +8,7 @@ useHead({
     },
   ],
 });
+const supabase = useSupabaseClient();
 const books = ref([]);
 const keyword = ref([]);
 const loading = ref(true);
@@ -89,7 +90,7 @@ onMounted(() => {
 }
 
 .container-fluid {
-  margin-top: 205px;
+  margin-top: 230px;
 }
 .card {
   width: 100%;

@@ -8,6 +8,7 @@ useHead({
     },
   ],
 });
+const supabase = useSupabaseClient();
 const visitors = ref([]);
 const jmlPengunjung = ref(0);
 const keyword = ref([]);
@@ -73,7 +74,7 @@ onMounted(() => {
 
 <style scoped>
 .container-fluid {
-  margin-top: 205px;
+  margin-top: 230px;
 }
 .bg-secondary {
   background-color: #d9d9d9 !important;

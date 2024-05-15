@@ -84,6 +84,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
+* {
+  text-decoration: none;
+}
 .card-body {
   width: 100%;
   padding: 0;

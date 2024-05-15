@@ -28,7 +28,7 @@ onMounted(() => {
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-1">
+      <div class="col-lg-1">
         <NuxtLink to="/buku" class="btn btn-primary mt-3">⬅️Back</NuxtLink>
       </div>
       <div class="col-sm-10">
@@ -39,24 +39,18 @@ onMounted(() => {
           <span v-if="loading">Sedang memuat gambar...</span>
           <span v-else><img :src="buku.cover" alt="cover" class="cover" /></span>
         </div>
-
-        <div class="col">
-          <div class="mb-5">
-            <div v-if="loading">Sedang memuat data...</div>
-            <div v-else>
-              <h6>No rak: {{ buku.rak.no_rak }}</h6>
-              <h6>Kategori: {{ buku.kategori.nama }}</h6>
-              <h6>Judul: {{ buku.judul }}</h6>
-              <h6>Penulis: {{ buku.penulis }}</h6>
-              <h6>Penerbit: {{ buku.penerbit }}</h6>
-              <h6>Tahun terbit: {{ buku.tahun_terbit }} 2019</h6>
-              <h6>Jumlah hal: {{ buku.jml_hal }}</h6>
-              <h6>Sinopsis/deskripsi:</h6>
-              <p>
-                {{ buku.deskripsi }}
-              </p>
-            </div>
-          </div>
+        <div v-if="loading">Sedang memuat data...</div>
+        <div v-else>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">No rak: {{ buku.rak.no_rak }}</li>
+            <li class="list-group-item">Kategori: {{ buku.kategori.nama }}</li>
+            <li class="list-group-item">Judul: {{ buku.judul }}</li>
+            <li class="list-group-item">Penulis: {{ buku.penulis }}</li>
+            <li class="list-group-item">Penerbit: {{ buku.penerbit }}</li>
+            <li class="list-group-item">Tahun terbit: {{ buku.tahun_terbit }}</li>
+            <li class="list-group-item">Jumlah hal: {{ buku.jml_hal }}</li>
+            <li class="list-group-item">Sinopsis/deskripsi: {{ buku.deskripsi }}</li>
+          </ul>
         </div>
       </div>
     </div>

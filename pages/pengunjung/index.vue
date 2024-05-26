@@ -14,12 +14,12 @@ const jmlPengunjung = ref(0);
 const keyword = ref([]);
 
 const getJmlPengunjung = async () => {
-  const { data, count } = await supabase.from("pengunjung").select("*", { count: "exact" });
+  const { data, count } = await supabase.from("allpengunjung").select("*", { count: "exact" });
   if (data) jmlPengunjung.value = count;
 };
 
 const getPengunjung = async () => {
-  const { data } = await supabase.from("pengunjung").select("nama, keanggotaan(*), jurusan, tingkat, tanggal, waktu, keperluan(*)").order("id", { ascending: false }).ilike("nama", `%${keyword.value}%`);
+  const { data } = await supabase.from("allpengunjung").select("*").order("id", { ascending: false }).ilike("nama", `%${keyword.value}%`);
   if (data) visitors.value = data;
 };
 onMounted(() => {
@@ -59,7 +59,7 @@ onMounted(() => {
               <td>{{ visitor.nama }}</td>
               <td>{{ visitor.keanggotaan.nama }}</td>
               <td>{{ visitor.tingkat }} {{ visitor.jurusan }}</td>
-              <td>{{ visitor.tanggal }}, {{ visitor.waktu }}</td>
+              <td>{{ visitor.tanggal }}, {{ visitor.time }}</td>
               <td v-if="visitor.keperluan != null">
                 {{ visitor.keperluan.nama }}
               </td>
